@@ -1,0 +1,430 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-primary-dark: #2563eb;
+  --color-success: #10b981;
+  --color-success-dark: #059669;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-bg: #0f172a;
+  --color-surface: #1e293b;
+  --color-card: #334155;
+  --color-border: #475569;
+  --color-text: #f1f5f9;
+  --color-text-muted: #94a3b8;
+}
+
+/* Dark Theme Variables (Default) */
+:root.dark,
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border-color: #475569;
+}
+
+/* Light Theme Variables */
+:root.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Apply theme colors to body */
+.dark body {
+  background: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a);
+  color: var(--text-primary);
+}
+
+.light body {
+  background: linear-gradient(to bottom right, #ffffff, #f8fafc, #f1f5f9);
+  color: var(--text-primary);
+}
+
+/* ===== LIGHT THEME STYLES - PERFECT FOR ALL PAGES ===== */
+.light {
+  /* Main body background */
+  body {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%) !important;
+  }
+
+  /* Background colors - ALL variations */
+  .bg-slate-900,
+  [class*="bg-gradient"][class*="slate-900"],
+  .from-slate-900,
+  .to-slate-900 {
+    background-color: #ffffff !important;
+    --tw-gradient-from: #ffffff !important;
+    --tw-gradient-to: #f8fafc !important;
+  }
+
+  .bg-slate-800,
+  .from-slate-800,
+  .to-slate-800,
+  .via-slate-800 {
+    background-color: #f8fafc !important;
+    --tw-gradient-from: #f8fafc !important;
+    --tw-gradient-to: #f1f5f9 !important;
+    --tw-gradient-via: #f1f5f9 !important;
+  }
+
+  .bg-slate-700,
+  .bg-slate-700\/50,
+  .bg-slate-700\/40,
+  .bg-slate-700\/30,
+  .bg-slate-700\/20 {
+    background-color: #f1f5f9 !important;
+  }
+
+  .bg-slate-600,
+  .bg-slate-600\/50 {
+    background-color: #e2e8f0 !important;
+  }
+
+  /* Text colors - ALL variations */
+  .text-white {
+    color: #0f172a !important;
+  }
+
+  .text-slate-100 {
+    color: #1e293b !important;
+  }
+
+  .text-slate-200 {
+    color: #334155 !important;
+  }
+
+  .text-slate-300 {
+    color: #475569 !important;
+  }
+
+  .text-slate-400 {
+    color: #64748b !important;
+  }
+
+  .text-slate-500 {
+    color: #64748b !important;
+  }
+
+  /* Border colors - ALL variations */
+  .border-slate-700,
+  .border-slate-700\/50,
+  .border-slate-700\/30 {
+    border-color: #e2e8f0 !important;
+  }
+
+  .border-slate-600,
+  .border-slate-600\/50,
+  .border-slate-600\/30 {
+    border-color: #cbd5e1 !important;
+  }
+
+  /* Divide colors */
+  .divide-slate-700 > * + * {
+    border-color: #e2e8f0 !important;
+  }
+
+  /* Shadows - softer in light mode */
+  .shadow-xl {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.05) !important;
+  }
+
+  .shadow-2xl {
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -4px rgba(0, 0, 0, 0.05) !important;
+  }
+
+  .shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03) !important;
+  }
+
+  /* Special elements */
+  header,
+  aside,
+  footer,
+  nav {
+    background: linear-gradient(to right, #ffffff, #f8fafc) !important;
+    border-color: #e2e8f0 !important;
+  }
+
+  /* Hover states - ALL variations */
+  .hover\:bg-slate-700:hover,
+  .hover\:bg-slate-700\/50:hover,
+  .hover\:bg-slate-700\/30:hover {
+    background-color: #e2e8f0 !important;
+  }
+
+  .hover\:bg-slate-600:hover {
+    background-color: #cbd5e1 !important;
+  }
+
+  .hover\:bg-slate-800:hover {
+    background-color: #f1f5f9 !important;
+  }
+
+  /* Input fields - Perfect visibility */
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder,
+  select::placeholder {
+    color: #94a3b8 !important;
+  }
+
+  /* Focus states */
+  input:focus,
+  select:focus,
+  textarea:focus {
+    background-color: #ffffff !important;
+    border-color: #3b82f6 !important;
+  }
+
+  /* Table styles */
+  table {
+    background-color: #ffffff !important;
+  }
+
+  thead {
+    background-color: #f8fafc !important;
+  }
+
+  tbody tr {
+    border-color: #e2e8f0 !important;
+  }
+
+  tbody tr:hover {
+    background-color: #f8fafc !important;
+  }
+
+  /* Card components */
+  [class*="rounded"] {
+    background-blend-mode: normal !important;
+  }
+
+  /* Stat cards and metrics */
+  .bg-gradient-to-br {
+    background: linear-gradient(to bottom right, #ffffff, #f8fafc) !important;
+  }
+
+  /* Charts remain colorful */
+  svg {
+    color: inherit !important;
+  }
+
+  /* Ensure all gradients work */
+  [class*="from-slate"] {
+    --tw-gradient-from: #f8fafc !important;
+  }
+
+  [class*="to-slate"] {
+    --tw-gradient-to: #f1f5f9 !important;
+  }
+
+  [class*="via-slate"] {
+    --tw-gradient-via: #f1f5f9 !important;
+  }
+
+  /* Backdrop blur elements */
+  .backdrop-blur-sm,
+  .backdrop-blur-md,
+  .backdrop-blur-xl {
+    backdrop-filter: blur(8px) !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  /* Landing page specific fixes */
+  .bg-gradient-to-br.from-slate-900 {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%) !important;
+  }
+
+  .bg-slate-900\/90 {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  /* Badge elements */
+  .bg-blue-500\/10,
+  .bg-green-500\/10,
+  .bg-yellow-500\/10,
+  .bg-purple-500\/10,
+  .bg-orange-500\/10,
+  .bg-red-500\/10 {
+    background-color: rgba(59, 130, 246, 0.1) !important;
+  }
+
+  .border-blue-500\/20 {
+    border-color: rgba(59, 130, 246, 0.3) !important;
+  }
+
+  /* White backgrounds with opacity */
+  .bg-white\/5 {
+    background-color: rgba(248, 250, 252, 1) !important;
+  }
+
+  .bg-white\/10 {
+    background-color: rgba(241, 245, 249, 1) !important;
+  }
+
+  .border-white\/10 {
+    border-color: #cbd5e1 !important;
+  }
+
+  /* Gradient text remains visible */
+  .bg-gradient-to-r.from-white {
+    --tw-gradient-from: #0f172a !important;
+    --tw-gradient-to: #3b82f6 !important;
+  }
+
+  .bg-clip-text {
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+  }
+
+  /* Status badges in light mode */
+  .bg-green-500\/10.text-green-400 {
+    background-color: rgba(16, 185, 129, 0.15) !important;
+    color: #059669 !important;
+  }
+
+  .bg-yellow-500\/10.text-yellow-400 {
+    background-color: rgba(251, 191, 36, 0.15) !important;
+    color: #d97706 !important;
+  }
+
+  .bg-red-500\/10.text-red-400 {
+    background-color: rgba(239, 68, 68, 0.15) !important;
+    color: #dc2626 !important;
+  }
+
+  /* Ensure text visibility on colored backgrounds */
+  .text-blue-400,
+  .text-green-400,
+  .text-yellow-400,
+  .text-red-400,
+  .text-purple-400,
+  .text-orange-400 {
+    filter: brightness(0.8) !important;
+  }
+
+  /* Keep accent colors vibrant but visible */
+  .from-blue-600,
+  .from-green-600,
+  .from-red-600 {
+    opacity: 1 !important;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Scrollbar styling - Dark theme */
+.dark ::-webkit-scrollbar {
+  width: 10px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 5px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Scrollbar styling - Light theme */
+.light ::-webkit-scrollbar {
+  width: 10px;
+}
+
+.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 1s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
