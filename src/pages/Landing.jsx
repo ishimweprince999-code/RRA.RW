@@ -229,7 +229,7 @@ export default function Landing() {
               <ArrowRight size={20} />
             </Link>
             <Link 
-              to="/login" 
+              to="/admin/login" 
               className="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all"
             >
               Admin Login
