@@ -1,0 +1,9 @@
+[build]
+  command = "vite build"
+  publish = "dist"
+
+# SPA redirect so deep links like /admin/login resolve to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
